@@ -1,0 +1,314 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+/*----UTILITY CLASSES----*/
+.container{
+width: 85vw;
+max-width:992px;
+margin:40px auto;
+}
+
+
+img{
+  max-width:100%;
+}
+
+
+.img-right{
+  float:right;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin: 10px 0 10px 30px;
+}
+
+
+.img-left{
+  float:left;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin: 10px 30px 10px 0;
+}
+
+
+.img-center{
+  display:block;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin: 30px auto;
+}
+
+
+#practice h3{
+  border-left: 10px solid rgba(30,138,91,1);
+  padding-left: 5px;
+}
+
+
+table{
+  width: 100%;
+  border: 2px solid #B2A9CF;
+  border-collapse: collapse;
+  margin: 20px auto;
+  /* "from the department of redundancy" */
+}
+table caption{}
+/* new friend! */
+tr:nth-child(even){ /*you can do pretty much any n formula here*/
+  background-color: lavender;
+}
+tr{}
+th{
+  background-color:#B2A9CF;
+  color: #fff;
+}
+td{
+  border: 2px solid #B2A9CF;
+  padding: 3px;
+}
+td:nth-child(n+2){ /*this behaves like a coordinate grid. remember in computers the first box is usually position 0, so +2 means starting AT 2*/
+  text-align: right;
+}
+tr:hover{
+  background-color: #ccc; /*TODO: make this a nicer color it's ugly*/
+}
+
+
+/*----GLOVAL STYLES----*/
+header.primary{
+  background-color:#DCF7EB;
+ 
+  text-align: center;
+  /*lonform*/
+  padding-top:40px;
+  padding-right:40px;
+  padding-bottom:40px;
+  padding-left:40px;
+  /*Single Value*/
+  padding:40px;
+
+
+  /*TRBL*/
+  padding: 40px 40px 20px 40px;
+
+
+  /*TB LR*/
+  padding: 20px 40px;
+  /*note that when multiple of the same selector are added, the last one will be applied. so the opposite of normal code reading*/
+}
+ 
+/* Make skip link visible when keyboard users tab to it */
+.visually-hidden:focus,
+.visually-hidden:focus-visible {
+  clip: auto;
+  height: auto;
+  width: auto;
+  margin: 0;
+  padding: 10px 14px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background: #ffffff;
+  color: #172635;
+  z-index: 9999;
+  border-radius: 6px;
+}
+
+
+body{
+  font-family: "Oxanium", sans-serif;
+  margin:0;
+}
+
+
+header.primary a{
+color:#FFF;
+text-decoration:none;
+}
+
+
+header.primary h1 a{
+  color:rgba(30,138,91,1);
+}
+
+
+header.primary h1{
+  font-size:2.4rem;
+  margin:0;
+}
+
+
+header.primary p.subtitle{
+  font-size:1.3rem;
+  margin:10px 0 20px;
+  letter-spacing: 0.2px;
+}
+
+
+header.primary nav{
+color:#B2A9CF;
+}
+
+
+header.primary nav ul{
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+  /*40 padding on the front is standard for lists to contain the attachment. Here we're removing it.*/
+}
+
+
+header.primary nav ul li{
+list-style-type:none;
+margin-bottom: 10px;
+flex:1;
+
+
+}
+
+
+header.primary nav ul li a{
+  /*this could also be nav.primary a, but being this specific allows better reading (for editors, but particularly the code)*/
+  background-color: rgba(30,138,91,1);
+  padding: 5px 7.5px;
+  display:block;
+  border-radius:10px 30px;
+  border: 1px groove #000;
+  transition:0.3s;
+}
+
+
+header.primary nav ul li a:hover{
+  background-color:#B2A9CF;
+}
+
+
+#content h2{
+color:rgba(30,138,91,1);
+border-bottom: 2px solid rgba(30,138,91,1);
+}
+
+
+#content p{
+  line-height:1.1;
+}
+
+
+#blog{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  gap:10px;
+  flex-wrap:wrap;
+  border-top: 6px double #ccc;
+  border-bottom: 6px double #ccc;
+  margin: 20px 0;
+  padding: 10px 0px 25px 0px;
+}
+
+
+#blog h2{
+  flex: 0 0 100%;
+  margin:0;
+  color:rgba(30,138,91,1);
+}
+
+
+#blog article.post{
+  box-shadow: 0 4px 8px #B2A9CF;
+  /*  There are seven properties on this. box shadow generator on the internet will be your friend */
+  padding:5px;
+  font-size:0.7rem;
+  flex:1;
+}
+
+
+figure{
+  margin:0;
+}
+
+
+#blog .post time, #blog figcaption{
+text-transform:capitalize;
+font-size:.8rem;
+}
+
+
+h1,h2,h3,h4.h5{
+  font-family:'Courier New', Courier, monospace;
+}
+#blog a{
+  color:rgba(30,138,91,1);
+}
+
+
+/* This guy is an attribute selector. It can target anything, pretty much*/
+aside[aria-label="Sidebar"]{
+  background-color:#B2A9CF;
+  padding:5px 0;
+}
+
+
+aside div.container{
+  display:flex;
+  flex-direction:row;
+  gap: 10px;
+}
+
+
+aside div.container a{
+  color:fff;
+}
+
+
+article.widget footer{
+  display:none;
+}
+
+
+footer.primary{
+  background-color: #B2A9CF;
+  padding:1px;
+  text-align:center;
+}
+
+
+
+
+/* practice */
+#practice h2{
+  color: rgba(30,138,91,1);
+  border-bottom:2px solid rgba(30,138,91,1);
+}
+
+
+#practice a:link, #practice a:visted{
+  color: rgba(30,138,91,1);
+}
+
+
+/*media queries
+most sites have multiple. some builders have these built in.*/
+@media screen and (max-width:500px){
+  header.primary nav ul{
+    flex-direction:column;
+    gap:5px;
+  }
+
+
+  #blog h2{
+  flex: 0 0 100%;
+  margin:0;
+  text-align:center;
+}
+} /*keep these at the bottom so they can inherit the earlier stuff*/
+
+
+/*there's a bunch of little niches for known breakpoints and standard dpi targets.
+  most of these are sort of industry practice or they're test-based.*/
