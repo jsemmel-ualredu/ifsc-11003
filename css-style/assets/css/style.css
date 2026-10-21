@@ -294,6 +294,42 @@ footer.primary{
 
 /* START NEW CODE HERE 10/14/26 */
 
+#pactice ol{
+List-style-type:lower-roman}
+#practice ul ul{
+    list-style-type:square;
+
+}
+#practice dl{
+
+}
+#practice dt{
+  font-weight:bold;
+
+}
+#practice dd{
+  background:red;
+   margin:0;
+}
+dd + dt{
+  margin-top: 20px;
+  color:red;
+}
+#practice blockquote{
+  border:4px double #c0c0c0;
+  padding:20px 40px;
+  margin:40px
+  border:
+}
+#practice cite{
+  display:block;
+  margin-top:20px;
+  text-align:right;
+  font-size:.8rem;
+
+}
+background-image: url{}
+
 
 /*media queries
 most sites have multiple. some builders have these built in.*/
